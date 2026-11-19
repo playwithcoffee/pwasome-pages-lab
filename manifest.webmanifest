@@ -1,0 +1,15 @@
+{
+  "id": "./",
+  "name": "PWAsome Hex Lab",
+  "short_name": "Hex Lab",
+  "description": "Offline UTF-8 to hexadecimal using the PWAsome Wasm Hex SDK",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#091421",
+  "theme_color": "#101e2d",
+  "icons": [
+    {"src":"./icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},
+    {"src":"./icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
+  ]
+}

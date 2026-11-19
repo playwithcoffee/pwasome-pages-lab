@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101e2d">
+  <meta name="description" content="An offline-capable UTF-8 to lowercase hexadecimal converter powered by the PWAsome Wasm Hex SDK.">
+  <link rel="icon" href="./icon-192.png" sizes="192x192" type="image/png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./app.css">
+  <title>PWAsome · Hex Lab</title>
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body data-n5-digest="selected">
+  <main class="shell">
+    <header class="topbar">
+      <span class="brand"><span class="brand-mark" aria-hidden="true">◈</span> PWAsome <span class="muted">/ Hex Lab</span></span>
+      <span id="network" class="chip" aria-live="polite">Checking connection</span>
+    </header>
+    <section class="hero" aria-labelledby="title">
+      <p class="eyebrow">N4 · First application</p>
+      <h1 id="title">Bytes in. Hex out.</h1>
+      <p>Convert UTF-8 text to lowercase hexadecimal using the independently qualified PWAsome WebAssembly Hex SDK. No cloud API or framework.</p>
+    </section>
+    <div class="layout">
+      <section class="panel" aria-labelledby="input-heading">
+        <div class="panel-head"><h2 id="input-heading">Input</h2><span class="micro" id="input-size">0 / 65,536 bytes</span></div>
+        <label for="input">UTF-8 text</label>
+        <textarea id="input" rows="9" spellcheck="false" placeholder="Type something here…">Hello, PWAsome!</textarea>
+        <p class="hint">Unicode is encoded as UTF-8. The SDK accepts at most 65,536 bytes; output is a separate copy.</p>
+        <div class="actions">
+          <button id="encode" class="primary" type="button" disabled>Encode text</button>
+          <button id="clear" type="button">Clear</button>
+        </div>
+      </section>
+      <section class="panel" aria-labelledby="output-heading">
+        <div class="panel-head"><h2 id="output-heading">Hex output</h2><span class="micro" id="output-size">0 bytes</span></div>
+        <label for="output">Lowercase ASCII</label>
+        <textarea id="output" rows="9" readonly placeholder="Encoding appears here"></textarea>
+        <p class="hint">Result is copied out of Wasm memory. Nothing is uploaded.</p>
+        <div class="actions"><button id="copy" type="button" disabled>Copy result</button></div>
+      </section>
+    </div>
+    <section class="panel" id="digest-panel" aria-labelledby="digest-heading" hidden>
+      <div class="panel-head"><h2 id="digest-heading">Optional SHA-256 digest</h2><span class="micro">N5 · Asynchronous</span></div>
+      <p class="hint">SHA-256 comes from the independent Web Crypto module. Its 32-byte digest is formatted only by the N3 Hex SDK.</p>
+      <button id="digest" type="button" disabled>Compute SHA-256</button>
+      <label for="digest-output">SHA-256 as lowercase hex</label>
+      <textarea id="digest-output" readonly rows="3" placeholder="Digest appears here"></textarea>
+      <p class="micro" id="digest-status" role="status" aria-live="polite">Optional module not loaded</p>
+    </section>
+    <section class="state-panel" aria-labelledby="engine-heading">
+      <div><p class="eyebrow">Engine lifecycle</p><h2 id="engine-heading">Wasm SDK</h2><p id="state" role="status" aria-live="polite">Not loaded</p><p id="details" class="micro">Click Load SDK to initialize.</p></div>
+      <div class="actions"><button id="load" type="button">Load SDK</button><button id="close" type="button" disabled>Close SDK</button></div>
+    </section>
+    <footer class="footer">
+      <span id="offline-status" role="status">Offline cache not yet confirmed</span>
+      <div class="actions compact"><button id="install" type="button" hidden>Install app</button><button id="check-update" type="button">Check update</button><button id="apply-update" type="button" hidden>Apply update</button></div>
+    </footer>
+  </main>
+</body>
+</html>

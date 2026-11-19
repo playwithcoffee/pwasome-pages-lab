@@ -1,0 +1,110 @@
+{
+  "manifest_revision": 1,
+  "source": {
+    "object_format": "sha1",
+    "commit": "1c34948b82d0eb748a263bafe282c74e04eddff6",
+    "tree": "bb4762076f865f8ca4bf683f29b41504d332fd83"
+  },
+  "profile": {
+    "id": "wasm-hex-browser-v1",
+    "sha256": "b7c37e7fd66827ea4583faf765351082db493a0e9c98943746e93f9f6fa7c0f3"
+  },
+  "configuration": "Size",
+  "configuration_sha256": "b07ebf6bb81aa105af82bfda70acadbdcd7697404ff3058f98d37cc0e4479f89",
+  "members": [
+    {
+      "path": "descriptor.json",
+      "bytes": 1933,
+      "sha256": "b07ebf6bb81aa105af82bfda70acadbdcd7697404ff3058f98d37cc0e4479f89"
+    },
+    {
+      "path": "hex.mjs",
+      "bytes": 5021,
+      "sha256": "af5fbaf8dfae1bccb76680ed6a478d97e1743be4d84b89d543865e80f1510d5b"
+    },
+    {
+      "path": "hex.wasm",
+      "bytes": 1669,
+      "sha256": "6704a4989ecd187da5b1b319796c668476c88d84e3caf7e0e475ce84d1b5adb4"
+    },
+    {
+      "path": "pwasome-hex.mjs",
+      "bytes": 18667,
+      "sha256": "70976c09674ed5a83bd679a753ec1d4d94056ef1f919fb217fee0f6add107045"
+    }
+  ],
+  "sdk": {
+    "manager_commit": "d7b4130688bfa348392b921ab04015aa15c4f154",
+    "release": "6.0.13",
+    "release_build": "eb132757325583b787fe9414b09afea9442b72ad",
+    "emcc_commit": "e13ee988ce3d87a738dd8f3661d02223308c412a",
+    "llvm_commit": "83ee07799c341b60965f07892f7bb3d175da05be"
+  },
+  "tools": [
+    {
+      "role": "sdk-python",
+      "version": "Python 3.13.3",
+      "sha256": "d87063e5597f257004c731b66c59c56c91038861c6877b1a3dca6b8c4e919125"
+    },
+    {
+      "role": "emcc-driver",
+      "version": "emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 6.0.13 (e13ee988ce3d87a738dd8f3661d02223308c412a)",
+      "sha256": "5ccd3b66c9433389b0338706182197340bfdf241777cc8985821e7d150818e46"
+    },
+    {
+      "role": "clang",
+      "version": "clang version 24.0.0git (https://github.com/llvm/llvm-project 83ee07799c341b60965f07892f7bb3d175da05be)",
+      "sha256": "e1fce785201ff8c33f62cbdf4c58f2014ab6a213ae8c06a9d15d2bf93d4abab1"
+    },
+    {
+      "role": "wasm-ld",
+      "version": "LLD 24.0.0 (llvm-project 83ee07799c341b60965f07892f7bb3d175da05be)",
+      "sha256": "3bd857ebf70a67a7fadf47cd66e9d09cc4b35e05d45e16df3361ac60c55be4d6"
+    },
+    {
+      "role": "wasm-opt",
+      "version": "wasm-opt version 133 (version_133-96-ga631c1445)",
+      "sha256": "3218704c7c7f21c2beb196ece44257c694e87363916ab32e5eaa094de7bb5cb5"
+    }
+  ],
+  "effective": {
+    "target": "wasm32-unknown-emscripten",
+    "pointer_bytes": 4,
+    "cpp_standard": 23,
+    "exceptions": false,
+    "rtti": false,
+    "memory_growth": false,
+    "shared_memory": false,
+    "simd": false,
+    "initial_memory_bytes": 1048576,
+    "stack_bytes": 65536,
+    "compile_flags": [
+      "-std=c++23",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-Oz",
+      "-x",
+      "c++"
+    ],
+    "link_flags": [
+      "-Oz",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-sDEFAULT_TO_CXX=1",
+      "--no-entry",
+      "-sMODULARIZE=1",
+      "-sEXPORT_ES6=1",
+      "-sENVIRONMENT=web",
+      "-sINITIAL_MEMORY=1048576",
+      "-sALLOW_MEMORY_GROWTH=0",
+      "-sSTACK_SIZE=65536",
+      "-sASSERTIONS=0",
+      "-sSTACK_OVERFLOW_CHECK=2",
+      "-sFILESYSTEM=0",
+      "-sMALLOC=none",
+      "-sEXPORTED_RUNTIME_METHODS=HEAPU8",
+      "-sINCOMING_MODULE_JS_API=wasmBinary,onAbort",
+      "-sEXPORTED_FUNCTIONS=[\"_pwasome_hex_request_offset\",\"_pwasome_hex_response_offset\",\"_pwasome_hex_query\",\"_pwasome_hex_begin\",\"_pwasome_hex_prepare\",\"_pwasome_hex_finish\",\"_pwasome_hex_abort\",\"_pwasome_hex_encode\"]"
+    ]
+  }
+}

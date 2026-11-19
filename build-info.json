@@ -1,0 +1,45 @@
+{
+  "schema": "pwas-n4-hex-lab-stage-v1",
+  "standing": "STAGED_NOT_BROWSER_QUALIFIED",
+  "n3_source_commit": "1c34948b82d0eb748a263bafe282c74e04eddff6",
+  "n3_source_tree": "bb4762076f865f8ca4bf683f29b41504d332fd83",
+  "n3_evidence_sha256": "3d9737fff93b6083b57a7526c6b413950cd0e2426477f5b4cc373523072acb20",
+  "selected_configuration": "Size",
+  "evidence_package_directory": "Size/package",
+  "size_manifest_sha256": "6e87b1708ec5c08a3ec80a5e0b4f8f0942add5a55d78b5af6f2127f16c46dcfc",
+  "service_worker_cache_version": "e0298fd450bbe62a04f050a9",
+  "n5_digest_flavor": "selected",
+  "n5_digest_member": {
+    "path": "modules/digest/sha256.mjs",
+    "bytes": 2272,
+    "sha256": "0d33d26141e0267f0a4dfb3c583d95a40cc0e06a28b68fd5cde327ae6950a65a"
+  },
+  "asset_count": 14,
+  "package_members": [
+    {
+      "path": "sdk/descriptor.json",
+      "bytes": 1933,
+      "sha256": "b07ebf6bb81aa105af82bfda70acadbdcd7697404ff3058f98d37cc0e4479f89"
+    },
+    {
+      "path": "sdk/hex.mjs",
+      "bytes": 5021,
+      "sha256": "af5fbaf8dfae1bccb76680ed6a478d97e1743be4d84b89d543865e80f1510d5b"
+    },
+    {
+      "path": "sdk/hex.wasm",
+      "bytes": 1669,
+      "sha256": "6704a4989ecd187da5b1b319796c668476c88d84e3caf7e0e475ce84d1b5adb4"
+    },
+    {
+      "path": "sdk/pwasome-hex.mjs",
+      "bytes": 18667,
+      "sha256": "70976c09674ed5a83bd679a753ec1d4d94056ef1f919fb217fee0f6add107045"
+    },
+    {
+      "path": "sdk/manifest.json",
+      "bytes": 3596,
+      "sha256": "6e87b1708ec5c08a3ec80a5e0b4f8f0942add5a55d78b5af6f2127f16c46dcfc"
+    }
+  ]
+}

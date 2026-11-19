@@ -1,0 +1,78 @@
+{
+  "descriptor_revision": 1,
+  "assembly_id": "pwasome.hex",
+  "transport_revision": 1,
+  "capabilities": [
+    {
+      "id": "encoding.hex",
+      "contract_revision": 1,
+      "operations": [
+        "H01"
+      ]
+    }
+  ],
+  "execution": {
+    "location": "browser-main",
+    "mode": "serialized-sync",
+    "public_results": "copied"
+  },
+  "admission": {
+    "max_input_bytes": 65536,
+    "max_output_bytes": 131072
+  },
+  "resources": {
+    "staging_bytes": 196608,
+    "grant_metadata_bytes": 64,
+    "control_bytes": 256,
+    "frame_bytes": 64,
+    "configuration_identity_bytes": 32,
+    "stack_bytes": 65536,
+    "initial_linear_memory_bytes": 1048576
+  },
+  "build": {
+    "configuration": "Size",
+    "target": "wasm32-unknown-emscripten",
+    "cpp_standard": 23,
+    "exceptions": false,
+    "rtti": false,
+    "memory_growth": false,
+    "shared_memory": false,
+    "simd": false,
+    "compile_flags": [
+      "-std=c++23",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-Oz",
+      "-x",
+      "c++"
+    ],
+    "link_flags": [
+      "-Oz",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-sDEFAULT_TO_CXX=1",
+      "--no-entry",
+      "-sMODULARIZE=1",
+      "-sEXPORT_ES6=1",
+      "-sENVIRONMENT=web",
+      "-sINITIAL_MEMORY=1048576",
+      "-sALLOW_MEMORY_GROWTH=0",
+      "-sSTACK_SIZE=65536",
+      "-sASSERTIONS=0",
+      "-sSTACK_OVERFLOW_CHECK=2",
+      "-sFILESYSTEM=0",
+      "-sMALLOC=none",
+      "-sEXPORTED_RUNTIME_METHODS=HEAPU8",
+      "-sINCOMING_MODULE_JS_API=wasmBinary,onAbort",
+      "-sEXPORTED_FUNCTIONS=[\"_pwasome_hex_request_offset\",\"_pwasome_hex_response_offset\",\"_pwasome_hex_query\",\"_pwasome_hex_begin\",\"_pwasome_hex_prepare\",\"_pwasome_hex_finish\",\"_pwasome_hex_abort\",\"_pwasome_hex_encode\"]"
+    ]
+  },
+  "host_requirements": [],
+  "unsupported": [
+    "async-engine-io",
+    "workers",
+    "shared-memory",
+    "persistent-domain-state",
+    "live-upgrade"
+  ]
+}
