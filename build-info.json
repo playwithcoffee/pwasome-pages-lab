@@ -7,7 +7,7 @@
   "selected_configuration": "Size",
   "evidence_package_directory": "Size/package",
   "size_manifest_sha256": "6e87b1708ec5c08a3ec80a5e0b4f8f0942add5a55d78b5af6f2127f16c46dcfc",
-  "service_worker_cache_version": "e0298fd450bbe62a04f050a9",
+  "service_worker_cache_version": "e0298fd450bbe62a04f050a9-pages-r1",
   "n5_digest_flavor": "selected",
   "n5_digest_member": {
     "path": "modules/digest/sha256.mjs",

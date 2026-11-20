@@ -1,7 +1,7 @@
 // Version-paired N3 SDK and optional N5 digest form one atomic offline asset set.
 // The site assembler replaces the N4 version token and (only for a selected build)
 // the exact N5 optional list marker. Unselected builds still cache 13 assets.
-const CACHE = 'pwasome-hex-lab-e0298fd450bbe62a04f050a9';
+const CACHE = 'pwasome-hex-lab-e0298fd450bbe62a04f050a9-pages-r1';
 const FILES = [
   './','./index.html','./app.css','./app.mjs','./manifest.webmanifest',
   './icon-192.png','./icon-512.png','./build-info.json',
